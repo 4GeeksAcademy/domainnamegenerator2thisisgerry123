@@ -4,26 +4,29 @@ import "./style.css";
 
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
-
 window.onload = function() {
   //write your code here
-  let pronoun = ["the", "our", "my", "her", "his"];
-  let adj = ["great", "big"];
-  let noun = ["jogger", "racoon"];
-  let extension = [".com", ".net", ".us", ".io"];
+  const pronoun = ["the", "our", "my", "her", "his"];
+  const adjective = ["great", "big"];
+  const noun = ["jogger", "racoon"];
+  const extension = [".com", ".net", ".us", ".io"];
 
   const bios = [];
 
-  for (let index = 0; index < pronoun.length; index++) {
-    for (let secondIndex = 0; secondIndex < adj.length; secondIndex++) {
-      for (let thirdIndex = 0; thirdIndex < noun.length; thirdIndex++) {
+  for (let pronounindex = 0; pronounindex < pronoun.length; pronounindex++) {
+    for (
+      let adjectiveIndex = 0;
+      adjectiveIndex < adjective.length;
+      adjectiveIndex++
+    ) {
+      for (let nounIndex = 0; nounIndex < noun.length; nounIndex++) {
         for (
-          let fourthIndex = 0;
-          fourthIndex < extension.length;
-          fourthIndex++
+          let extensionIndex = 0;
+          extensionIndex < extension.length;
+          extensionIndex++
         ) {
           bios.push(
-            `${pronoun[index]}${adj[secondIndex]}${noun[thirdIndex]}${extension[fourthIndex]}`
+            `${pronoun[pronounindex]}${adjective[adjectiveIndex]}${noun[nounIndex]}${extension[extensionIndex]}`
           );
         }
       }
